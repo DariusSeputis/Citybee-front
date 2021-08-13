@@ -35,21 +35,24 @@ function fetchVehicles(endpoint_ending) {
         switch (item.county_location) {
           case "lt":
             location.textContent = "Lietuvoje";
-            tdPricePerHour.textContent = `${
-              item.hour_price + item.hour_price * 0.21
-            }\u20AC`;
+            tdPricePerHour.textContent = `${(
+              item.hour_price +
+              item.hour_price * 0.21
+            ).toFixed(2)}\u20AC`;
             break;
           case "lv":
             location.textContent = "Latvijā";
-            tdPricePerHour.textContent = `${
-              item.hour_price + item.hour_price * 0.21
-            }\u20AC`;
+            tdPricePerHour.textContent = `${(
+              item.hour_price +
+              item.hour_price * 0.21
+            ).toFixed(2)}\u20AC`;
             break;
           case "ee":
             location.textContent = "Eestis";
-            tdPricePerHour.textContent = `${
-              item.hour_price + item.hour_price * 0.2
-            }\u20AC`;
+            tdPricePerHour.textContent = `${(
+              item.hour_price +
+              item.hour_price * 0.2
+            ).toFixed(2)}\u20AC`;
             break;
           default:
             break;
