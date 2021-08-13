@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- normalize -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/normalize/4.1.1/normalize.min.css"
+      integrity="sha512-4oJiHyX3IWAdU3YotQW0piF3VIAU+vzoBYFoBj8fEzqXK9e9N3GUUvgRAgrQxDmtWnbwzZ27BD85R7oQEag55Q=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <!-- Bootstrap css -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-KyZXEAg3QhqLMpG8r+8fhAXLRk2vvoC2f3B09zVXn8CA5QIVfZOJ3BCsw2P0p/We"
+      crossorigin="anonymous"
+    />
+    <!-- Custom JS -->
+    <script src="../scripts/addVehicle.js" defer></script>
+    <title>CityBee | add vehicle</title>
+  </head>
+  <body>
+    <header>
+      <nav class="navbar navbar-expand-sm navbar-light bg-light">
+        <ul class="navbar-nav m-auto">
+          <li class="nav-item active">
+            <a class="nav-link" href="../index.html">Home</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="./viewModels.html">View Models</span></a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="./addModel.html">Add Model</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="./viewVehicles.html">View Vehicles</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="./addVehicle.html">Add Vehicle <span class="sr-only">(current)</a>
+          </li>
+        </ul>
+      </nav>
+    </header>
+    <main>
+      <div class="container-sm">
+        <h2 class="text-center">POST /vehicles</h2>
+        <form>
+          <div class="mb-3">
+            <label for="carModel" class="form-label">Car model</label>
+            <select class="form-select" id="carModel" aria-label="Default select example">
+              <option selected>Choose a car model</option>
+            </select>
+          </div>
+          <div class="mb-3">
+            <label for="numberPlate" class="form-label">Number plate</label>
+            <input type="text" class="form-control" id="numberPlate">
+          </div>
+          
+          <div class="mb-3">
+            <label for="countyLocation" class="form-label">Country</label>
+            <select class="form-select" id="countyLocation" aria-label="Default select example">
+              <option selected>Choose a country</option>
+              <option value="lt">Lietuvoje</option>
+              <option value="lv">Latvijā</option>
+              <option value="ee">Eestis</option>
+            </select>
+          </div>
+          <button type="submit" class="btn btn-primary">Add vehicle</button>
+        </form>
+        <h3 id="formSubmitResponseOutput"></h3>
+      </div>
+    </main>
+    <footer></footer>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-U1DAWAznBHeqEIlVSCgzq+c9gqGAJn5c/t99JyeKa9xxaYpSvHU5awsuZVVFIhvj"
+      crossorigin="anonymous"
+    ></script>
+  </body>
+</html>
